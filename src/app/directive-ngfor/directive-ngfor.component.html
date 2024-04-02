@@ -1,0 +1,58 @@
+<!-- <div class="conatainer w-50 border mt-2 p-2">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Employee Name</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employeeList; let i = index; let o = odd">
+                <th>{{i + 1}}</th>
+                <th>{{employee.empName}}</th>
+                <th>{{employee.designation}}</th>
+                <th>{{employee.salary}}</th>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+</div> -->
+
+<!-- <div class="container w-50 border mt-2 p-2">
+
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container
+            *ngFor="let employee of employeeList; let i= index; let o = odd; let e = even;">
+               <tr *ngIf="employee.salary>50000">
+                <th>{{i + 1}}</th>
+                <td>{{employee.empName}}</td>
+                <td>{{employee.designation}}</td>
+                <td>{{employee.salary}}</td>
+
+               </tr>
+        </ng-container>
+    </tbody>
+</div> -->
+
+<!-- using ngswitch  -->
+
+<select [(ngModel)]="selectedValue">  
+    <option *ngFor="let item of items;" [value]="item.name">{{item.name}}</option>  
+</select>  
+<div class='row' [ngSwitch]="selectedValue">  
+    <div *ngSwitchCase="'One'">One is Pressed</div>  
+    <div *ngSwitchCase="'Two'">Two is Selected</div>  
+    <div *ngSwitchDefault>Default Option</div>  
+</div>  

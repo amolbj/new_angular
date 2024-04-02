@@ -1,0 +1,50 @@
+<!-- using ngclass -->
+<!-- 
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let employee of employeeList;let i=index;let o=odd;let e=even;">
+            <!-- [ngClass]="{'bg-primary':e}" -->
+            <!-- [ngClass]="{'bg-primary':e,'bg-secondary':o}" -->
+            <!-- <tr  *ngIf="employee.salary > 50000" [ngClass]="e ? 'bg-primary': 'bg-secondary'" >
+                <th>{{i+1}}</th>
+                <td>{{employee.empName}}</td>
+                <td>{{employee.designation}}</td>
+                <td>{{employee.salary}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table> --> 
+
+<!-- using ngstyle -->
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let employee of employeeList; let i = index; let o = odd;let e = even;">
+            <tr *ngIf="employee.salary > 50000" [ngStyle]="{'background-color':e ? 'gray':'red'}">
+
+                <th>{{i + 1}}</th>
+                <td>{{employee.empName}}</td>
+                <td>{{employee.designation}}</td>
+                <td>{{employee.salary}}</td>
+            </tr>
+
+        </ng-container>
+    </tbody>
+
+</table>

@@ -1,0 +1,42 @@
+<!-- using ngif  -->
+<!-- <div *ngIf="isShow">
+    <label for="id1">First Name</label>
+    <input type="text" name="fName" id="id1">
+    <br>
+    <button type="button" (click)="toggle">Toggle</button>
+
+</div> -->
+
+
+<!-- using ngif-elsse -->
+
+<!-- <div *ngIf="isShow; else anotherBlock">
+    <label for="id1">First Name</label>
+    <input type="text" name="fName" id="id1">
+</div>
+<ng-template #anotherBlock>
+
+    <div>
+
+        <label for="id1">Entity Name</label>
+        <input type="text" name="eName" id="id1">
+    </div>
+</ng-template> -->
+
+<!-- using ngif-then-else block -->
+
+<div *ngIf="isShow; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <div>
+        <label for="id1">First Name</label>
+    <input type="text" name="fName" id="id1">
+
+    </div>
+</ng-template>
+<ng-template #elseBlock>
+    <div>
+        <label for="id2">Entity Name</label>
+        <input type="text" name="eName" id="id2">
+    </div>
+
+</ng-template>

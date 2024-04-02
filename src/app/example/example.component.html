@@ -1,0 +1,43 @@
+<p>example works!</p>
+<h3>First Name:{{firstName}}</h3>
+<h3>lastName:{{lastName}}</h3>
+<h3>Employee Designation:{{employeeObj.designation}}</h3>
+<h3>CompanyName:{{employeeObj.companyName}}</h3>
+<!-- <h3>Skills are:{{skills[0]}}, {{skills[1]}}, {{skills[2]}}</h3> -->
+<br>
+<a href="fbLink">Facebook</a>
+<h4>{{10+5}}</h4>
+<a href="{{fbLink}}">Facebook1</a>
+<h2 [textContent]="Message"></h2>
+<br> 
+<div>
+  <label for="">Mobile Number</label>
+  <input type="number" name="mobileNo" appOnlyNumbers>
+</div>
+
+
+<button class="btn" type="button" [disabled]="isBtnDisabled">Save</button>
+<!-- use in property binding -->
+<br>
+<button type="button" class="Btn" disabled="{{isBtnDisabled}}">Save</button>
+<!-- use in interpolation -->
+
+<h3>{{message | uppercase}}</h3>
+<h3>{{message1 | lowercase}}</h3>
+<h3>Salary:{{employeeObj.salary |currency:'INR'}}</h3>
+<h3>Join Date:{{joinDate | date}}</h3>
+<h3>Join Date:{{joinDate | date:'shortDate'}}</h3>
+<h3>Join Date:{{joinDate | date:'DD/MM/YYYY'}}</h3>
+<h3>Join Date:{{joinDate | date:'mediumDate'}}</h3>
+<h3>Join Date:{{joinDate | date:'06-11-1995'}}</h3>
+<h3>Income:{{income | number:'.1-1'}}</h3>
+<h3>Total Price:{{totalPrice | number:'6.2-4'}}</h3>
+<br>
+<br>
+<h3>value inc & dec operarator</h3>
+<button type="button" (click)="increment()">Increment</button>
+{{counter}}
+<button type="button" (click)="decrement()">Decrement</button>
+<br>
+<button type="button" (click)="myfun()">Save</button>
+<br><br>

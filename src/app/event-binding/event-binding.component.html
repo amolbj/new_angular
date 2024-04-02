@@ -1,0 +1,27 @@
+<!-- <div class="container mt-5">
+    <button type="button" (click)="increment()">Increment</button>
+    {{counter}}
+    <button type="button" (click)="decrement()">Decrement</button>
+    <button type="button" (click)="Myfun()">Save The Value</button>
+</div> -->
+
+<button type="button" (click)="performAction('Increment')">Increment</button>
+{{counter}}
+<button type="button" (click)="performAction('Decrement')">Decrement</button>
+
+<h3 (mouseover)="printMessage()">Hover Me</h3>
+<br><br>
+
+<div class="conatainer">
+    <label for="id1">Product Price</label>
+<input type="text" name="pPrice" id="id1" (input)="productPriceChange($event)">
+<br>
+<label for="id2">Quantity</label>
+<input type="text" name="quantity" id="id2" (input)="quantityChange($event)">
+<br>
+<h3>Total Price:{{totalPrice}}</h3>
+</div>
+<br><br>
+<label for="id3">First Name</label>
+<input type="text" name="fName" id="id3" [value]="firstName" (input)="fNameChange($event)">
+<h5>Entered Name:{{firstName}}</h5>

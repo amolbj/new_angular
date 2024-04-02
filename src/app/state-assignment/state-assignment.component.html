@@ -1,0 +1,29 @@
+<!-- dependent dropdown 
+  when user select the state  then respective city should display in the dropdown.
+
+states:any = {
+   "Maharashtra":["Mumbai","Pune","Nashik"],
+   "Rajasthan":["Jaipur","Jodhpur"],
+   "Madhyapradesh":["Indore","Bhopal"]
+} -->
+
+<div class="container">
+    <div class="row w-25">
+        <label for="id1">States</label>
+        <select name="stateName" id="id1" [(ngModel)]="selectedState"
+            (ngModelChange)="getDistricts()">
+            <option *ngFor="let item of statesList"
+                [value]="item">{{item}}</option>
+        </select>
+
+    </div>
+    <div class="row w-25">
+        <label for="id1">Districts</label>
+        <select name="dName" id="id1">
+            <option *ngFor="let item of districtList"
+                [value]="item">{{item}}</option>
+        </select>
+
+    </div>
+
+</div>

@@ -1,0 +1,74 @@
+<!-- <h3>*ngIf example </h3>
+
+<div class="container mt-5">
+    <div *ngIf="isShow">
+        <label for="id1">First Name</label>
+        <input type="text" name="fName" id="id1">
+    
+    </div>
+    <button type="button" (click)="toggle">Toggle</button>
+</div> -->
+
+<!-- <h3>*ngIf-else example</h3>
+
+<div class="container">
+    <div *ngIf="isShow; else anotherBlock">
+        <label for="id1">First Name:</label>
+        <input type="text" name="fName" id="id1">
+
+    </div>
+    <ng-template #anotherBlock>
+          <div>
+            <label for="id2">Entity Name:</label>
+            <input type="text" name="eName" id="id2">
+          </div>
+
+    </ng-template>
+</div> -->
+
+
+<!-- <h3>*ngIf-else example</h3>
+
+<div *ngIf="isShow; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <div>
+        <label for="id1">First Name:</label>
+        <input type="text" name="fName" id="id1">
+    </div>
+
+</ng-template>
+<ng-template #elseBlock>
+ 
+    <div>
+        <label for="id1">Entity Name:</label>
+        <input type="text" name="eName" id="id1">
+    </div>
+</ng-template>
+<button type="button" (click)="toggle">toggle</button> -->
+
+<h3>*ngFor example</h3>
+
+<ul>
+    <li *ngFor="let item of courseList">{{item}}</li>
+</ul>
+<br>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeList; let i=index;,let e = even">
+            <th>{{i + 1}}</th>
+            <td>{{employee.empName}}</td>
+            <td>{{employee.designation}}</td>
+            <td>{{employee.salary}}</td>
+
+        </tr>
+    </tbody>
+
+</table>
